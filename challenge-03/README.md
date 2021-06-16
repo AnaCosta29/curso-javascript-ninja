@@ -3,7 +3,7 @@
 ```js
 // Declarar uma variável qualquer, que receba um objeto vazio.
 ?
-
+let obj={}
 /*
 Declarar uma variável `pessoa`, que receba suas informações pessoais.
 As propriedades e tipos de valores para cada propriedade desse objeto devem ser:
@@ -17,7 +17,25 @@ As propriedades e tipos de valores para cada propriedade desse objeto devem ser:
 - `caminhouQuantosMetros` - Number - recebe "zero" por padrão
 */
 ?
-
+let pessoa={
+nome :'Ana',
+sobrenome:'Costa',
+sexo:  'f',
+idade: 32,
+altura: 1.83,
+peso:54,
+andando:false,
+caminhouQuantosMetros:0,
+fazerAniversario(){
+this.idade+=1
+},
+andar(qtdM){
+this.caminhouQuantosMetros+=`${qtdM}`
+this.andando=true
+},
+parar(){
+this.andando=false
+}
 /*
 Adicione um método ao objeto `pessoa` chamado `fazerAniversario`. O método deve
 alterar o valor da propriedade `idade` dessa pessoa, somando `1` a cada vez que
