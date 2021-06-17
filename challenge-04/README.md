@@ -8,6 +8,12 @@ equivalente booleano para o valor passado no argumento for `true`, ou `false`
 para o contrário.
 */
 ?
+let isTruthy=a=>{
+if(a ===true){
+return true
+}else{
+return false
+}
 
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
 ?
@@ -30,6 +36,33 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 - `quantidadePessoas` - Number - zero por padrão
 */
 ?
+let carro={
+marca: 'honda',
+modelo: 'civic',
+placa: 'cwky',
+ano: 1981,
+cor: 'cinza',
+quantasPortas:4,
+assentos:5,
+quantidadePessoas:0,
+mudarCor(color){
+this.cor=color
+},
+obterCor(){
+return this.cor
+},
+obterModelo(){
+return this.modelo
+},
+obterMarca(){
+this.marca
+},
+obterMarcaModelo(){
+return `Esse carro é um ${this.marca} ${this.modelo}`
+},
+addPessoas(qtdPessoas){
+return 
+}
 
 /*
 Crie um método chamado `mudarCor` que mude a cor do carro conforme a cor
@@ -58,6 +91,8 @@ Crie um método chamado `obterMarcaModelo`, que retorne:
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
 ?
+//carro.obterMarcaModelo()
+//"Esse carro é um honda civic"
 
 /*
 Crie um método que irá adicionar pessoas no carro. Esse método terá as
