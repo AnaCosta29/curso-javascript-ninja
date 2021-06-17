@@ -61,7 +61,10 @@ obterMarcaModelo(){
 return `Esse carro é um ${this.marca} ${this.modelo}`
 },
 addPessoas(qtdPessoas){
-return 
+let totalPessoas=this.quantidadePessoas+=qtdPessoas
+return `Já temos ${totalPessoas} pessoas no carro!`
+
+}
 }
 
 /*
