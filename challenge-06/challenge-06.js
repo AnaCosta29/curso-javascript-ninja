@@ -35,9 +35,14 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
     "Não temos a informação do time que está nessa posição."
 */
 // ?
-let showTeamPosition=(number)=>{
-  return 'O time que está em ${number+1}º lugar é o ${teams[number]}.'
+let showTeamPosition = (number) => {
+  return `O time que está em ${number}º lugar é o ${teams[number-1]}.`
 }
+console.log(showTeamPosition(1))
+console.log(showTeamPosition(2))
+console.log(showTeamPosition(3))
+console.log(showTeamPosition(4))
+console.log(showTeamPosition(5))
 /*
 Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
 função acima. Entre esses 4, adicione 1 que não esteja entre os 5 primeiros.
