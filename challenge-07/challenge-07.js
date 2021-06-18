@@ -2,18 +2,25 @@
 Crie um array com 5 items (tipos variados).
 */
 // ?
-
+let itemVariados=['ana',0,null,{a:23},[1,2,3]]
 /*
 Crie uma função chamada `addItem`, que irá adicionar itens no array criado.
 A função deverá retornar o array atualizado.
 */
 // ?
 
+let addItem=(item)=>{
+  itemVariados.push(item)
+  return itemVariados
+}
+console.log(addItem('caixa'))
 /*
 Adicione um novo array ao array criado no início do desafio, com ao menos 3
 itens de tipos diferentes, mostrando o resultado no console.
 */
 // ?
+itemVariados.push(['cola','lapis','estojo'])
+console.log(itemVariados)
 
 /*
 Mostre no console o segundo elemento desse último array, criado acima, com a
@@ -21,7 +28,8 @@ frase:
 "O segundo elemento do segundo array é [ELEMENTO]."
 */
 // ?
-
+console.log(itemVariados[6][2])
+console.log(`O segundo elemento do segundo array é ${itemVariados[6][2]}.`)
 /*
 Mostre no console quantos itens tem o primeiro array criado, com a frase:
 "O primeiro array tem [QUANTIDADE DE ITENS] itens."
