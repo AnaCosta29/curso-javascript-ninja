@@ -7,14 +7,23 @@ loop, mostre no console a mensagem:
 'Entrou ao menos uma vez!'
 Qual loop você deve usar para que essa mensagem seja mostrada no console?
 */
-// ?
+let once=false
+while(once===true){
+  console.log('Entrou ao menos uma vez!')
+  once++
+}
 
 /*
 Crie um objeto chamado `person`, que receba as seguintes propriedades:
 - 'name', 'age', 'weight' e 'birthday'. Preencha com os valores corretos
 para o nome, idade, peso e data de nascimento dessa pessoa.
 */
-// ?
+let person={
+  name:'jose',
+  age:17,
+  weight:57,
+  birthday:'17/05/1989'
+}
 
 /*
 Use um loop para percorrer o objeto criado acima, mostrando no console
@@ -26,7 +35,11 @@ Após o loop, mostre a frase:
 'The person has [COUNTER] properties'
 */
 // ?
+let counter
 
+for(let i=0;i<person.length;i++){
+  console.log(`The ${person}of person is ${i}`)
+}
 /*
 Crie uma função chamada `moreThan`, que vai verificar se a pessoa (objeto
 criado acima) é mais velha que a idade passada por parâmetro.
@@ -35,6 +48,13 @@ Após a função, mostrar a mensagem no console:
 'The person has more than 25 years old? [TRUE/FALSE]'
 */
 // ?
+function moreThan(idade){
+  if(this.age>idade){
+    return true
+  }
+  return false
+  
+}
 
 /*
 Faça um loop de 0 a 20, que adicione cada número como um item de um
