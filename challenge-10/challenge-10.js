@@ -9,10 +9,10 @@ deles seja "true", usando os Wrapper Objects como "conversores" nos valores
 das variáveis. Analise o que está sendo impresso no console para saber como
 resolver o problema corretamente.
 */
-var five = '5';
+var five = Number('5');
 console.log( five + ' é número?', typeof five === 'number' );
 
-var concat = 10 + 10;
+var concat = String(10 + 10);
 console.log( '"' + concat + '" é uma string? E é igual a "1010"?', typeof concat === 'string' );
 
 /*
@@ -25,6 +25,28 @@ função receberá dois parâmetros e retornará a operação referente à sua
 propriedade, usando os valores passados por parâmetro.
 */
 // ?
+let operation={
+  '+':function(number1,number2){
+    return num1+num2
+    
+  },
+'-':function(number1,number2){
+    return num1-num2
+    
+  },
+'*':function(number1,number2){
+    return num1*num2
+    
+  },
+'/':function(number1,number2){
+    return num1/num2
+    
+  },
+'%':function(number1,number2){
+    return num1%num2
+    
+  }
+}
 
 /*
 Crie uma função chamada `isOperatorValid`, que receberá um operador por
@@ -37,6 +59,9 @@ Caso contrário, "false".
 - O desafio é fazer o retorno sem usar "if" ou "switch".
 */
 // ?
+let isOperatorValidz=(operation)=>{
+  return operation?true:false
+}
 
 /*
 Agora vamos criar a calculadora.
@@ -51,7 +76,18 @@ operador passado para a função "calculator", e passando para esse método
 os dois parâmetros da função de retorno de "calculator".
 */
 // ?
-
+ let calculator=(operador)=>{
+   if(!operador){
+     return false
+   }else if(operador){
+     return function(num1,num2){
+       if(typeof num1 !='number' || typeof num2!='number'){
+         return false
+       }else{
+         return operation
+     }
+   }
+ }
 /*
 Crie uma função chamada "showOperationMessage" que recebe três parâmetros:
 - o operador, o primeiro número e o segundo número. O retorno da função
@@ -60,7 +96,10 @@ deve ser a frase:
 Essa função mostrará a mensagem da operação que criaremos mais abaixo.
 */
 // ?
-
+let showOperationMessage=(operador,num1,num2)=>{
+ 
+  return `A operação ${num1} ${operador} ${num2} =sum`
+}
 /*
 Crie uma função chamada "showErrorMessage" que recebe um parâmetro: o
 operador da operação cálculo, quando a operação não for válida.
@@ -68,7 +107,11 @@ Essa função deverá retornar a frase:
 'Operação "[OPERATOR]" não permitida!'
 */
 // ?
-
+let showErrorMessage=(operador)=>{
+  if(!operador){
+    return `Operação "${operador}" não permitida!`
+  }
+}
 /*
 Nossa calculadora está pronta! Agora vamos testá-la:
 PASSO 1:
@@ -76,6 +119,9 @@ PASSO 1:
 "operationSignal", sem valor por enquanto.
 */
 // ?
+let number1=0
+let number2=0
+let operationSignal
 
 /*
 PASSO 2:
@@ -84,7 +130,8 @@ variável chamada "sum", que receba a função "calculator", passando por
 parâmetro a variável que recebeu o sinal da operação.
 */
 // ?
-
+operationSignal='+'
+let sum =calculator(operationSignal)
 /*
 PASSO 3:
 "sum" agora é uma função, e, se o sinal correto não foi passado para a
