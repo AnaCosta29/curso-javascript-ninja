@@ -60,7 +60,7 @@ Caso contrário, "false".
 */
 // ?
 let isOperatorValidz=(operation)=>{
-  return operation?true:false
+  return operation[opertation]!==undefined
 }
 
 /*
@@ -77,14 +77,15 @@ os dois parâmetros da função de retorno de "calculator".
 */
 // ?
  let calculator=(operador)=>{
-   if(!operador){
+   if(!isOperatorValidz(operador){
      return false
-   }else if(operador){
-     return function(num1,num2){
-       if(typeof num1 !='number' || typeof num2!='number'){
+   }
+   return function(num1,num2){
+       if(typeof num1 !='number' && typeof num2!='number'){
          return false
-       }else{
-         return operation
+       }
+        return operation[operador](num1,num2)
+     
      }
    }
  }
@@ -96,10 +97,7 @@ deve ser a frase:
 Essa função mostrará a mensagem da operação que criaremos mais abaixo.
 */
 // ?
-let showOperationMessage=(operador,num1,num2)=>{
- 
-  return `A operação ${num1} ${operador} ${num2} =sum`
-}
+let showOperationMessage
 /*
 Crie uma função chamada "showErrorMessage" que recebe um parâmetro: o
 operador da operação cálculo, quando a operação não for válida.
